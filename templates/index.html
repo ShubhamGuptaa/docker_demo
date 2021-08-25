@@ -1,0 +1,37 @@
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />
+			<link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+			<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+			<title>Docker</title>
+		</head>
+		<body>
+			<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+      <!-- Instruction -->
+				<div class="w3-display-middle">
+					<h1 class="w3-jumbo w3-animate-top w3-center">Shubham Gupta</h1>
+					<hr class="w3-border-grey" style="margin:auto;width:40%">
+					<p class="w3-large w3-center">This is a demo project running on Docker</p>
+				<div>
+				
+				<br>
+				<!-- display -->
+				<div>
+					<h2>Docker is running . . .</h2>
+					<form action="/new" method="POST">
+						<input type="text" placeholder="name" name="name" id="name" />	
+						<input type="text" placeholder="profession" name="description" id="description" />	
+						<input class="myButton" type="submit" value="submit" />
+					</form>
+
+					<h2>The output will show the mongodb connections</h2>
+					{% for item in items %}
+					<p>{{item["name"] }} {{item["description"] }}</p>
+					{% endfor %}
+				</div>
+			</div>
+		</body>
+	</html>
